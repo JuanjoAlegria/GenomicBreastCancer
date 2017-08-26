@@ -10,14 +10,14 @@ shortDirectory = "/Users/nataliacarignano/Desktop/lsds/project/shortData/"
 
 def importData(file):
 	dt = {'names':["id","log_rat2n_mean"], 'formats':[np.int, np.float_]}
-	info = np.genfromtxt(file, usecols = (0,17)) #, names=["id","log_rat2n_mean"])
+	info = np.genfromtxt(file, usecols = (0,17)) 
 	return info
 	
 def writeData(info,fname):
 	#create new file, write reduced data to new file
 	newf = shortDirectory+"short"+fname[:-4]+".txt"
 	
-	np.savetxt(newf,info, header= "id	log_rat2n_mean", fmt = ['%i', '%1.3f']) #, fmt= ['%f', '%1.4f'])
+	np.savetxt(newf,info, header= "id	log_rat2n_mean", fmt = ['%i', '%1.3f'])
 
 
 
