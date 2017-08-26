@@ -13,6 +13,11 @@ def importData(file):
 	info = np.genfromtxt(file, usecols = (0,17)) 
 	return info
 	
+def getSubtype(dataFile, subtypeFile):
+	
+	return subtype
+	
+	
 def writeData(info,fname):
 	#create new file, write reduced data to new file
 	newf = shortDirectory+"short"+fname[:-4]+".txt"
