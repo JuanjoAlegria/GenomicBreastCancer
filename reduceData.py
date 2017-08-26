@@ -7,13 +7,13 @@ import numpy as np
 
 directory = "/Users/nataliacarignano/Desktop/lsds/project/data/GSE10886_family.xml/"
 shortDirectory = "/Users/nataliacarignano/Desktop/lsds/project/shortData/"
+subtypeFile = "/Users/nataliacarignano/Desktop/lsds/project/data/226subtypes.csv"
 
-def importData(file):
-	dt = {'names':["id","log_rat2n_mean"], 'formats':[np.int, np.float_]}
-	info = np.genfromtxt(file, usecols = (0,17)) 
+def importData(file, cols):
+	info = np.genfromtxt(file, usecols = cols) 
 	return info
 	
-def getSubtype(dataFile, subtypeFile):
+def getSubtype(file):
 	
 	return subtype
 	
@@ -37,7 +37,7 @@ def main():
 	
 	f = "GSM34464-tbl-1.txt"
 	
-	d = importData(directory+f)
+	d = importData(directory+f, (0,17))
 	writeData(d,f)		
 			
 		
